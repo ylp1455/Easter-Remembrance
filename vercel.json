@@ -1,0 +1,14 @@
+{
+    "Builds":[
+        {
+            "src":"main.py",
+            "use":"python3"
+        }
+    ],
+    "Routes":[
+        {
+            "src":"/(.*)",
+            "dest":"main.py"
+        }
+    ]    
+}
