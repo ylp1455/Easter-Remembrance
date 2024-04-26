@@ -9,6 +9,7 @@ html, body {
  height: 100%;
  display: flex;
  flex-direction: column;
+ overflow-wrap: normal;
 }
 
 @media (min-width: 1200px) {
@@ -20,7 +21,6 @@ html, body {
 h1, h2, h3, h4, h5 {
  margin: 0;
  line-height: 1.1;
- word-break: break-word; /* Prevents long words from breaking out of their container */
 }
 
 header {
@@ -103,7 +103,6 @@ header.container, div.container {
  box-sizing: border-box;
  margin: 0.25rem 0.5rem;
  width: calc(100% - 1rem);
- min-width: 0; /* Allows flex items to shrink below their content size */
 }
 
 @media (min-width: 375px) {
