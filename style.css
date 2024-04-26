@@ -1,171 +1,178 @@
-html,
-body {
-  background: black;
-  font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
-  color: white;
-  word-break: break-word;
-  hyphens: auto;
-  margin: 0;
-  padding: 4px 16px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+html, body {
+ background: black;
+ font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+ color: white;
+ word-break: break-word;
+ hyphens: auto;
+ margin: 0;
+ padding: 4px 16px;
+ height: 100%;
+ display: flex;
+ flex-direction: column;
 }
 
 @media (min-width: 1200px) {
-  body {
+ body {
     overflow-y: hidden;
-  }
+ }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  margin: 0;
-  line-height: 1.1;
+h1, h2, h3, h4, h5 {
+ margin: 0;
+ line-height: 1.1;
+ word-break: break-word; /* Prevents long words from breaking out of their container */
 }
 
 header {
-  padding: 2rem 0;
+ padding: 2rem 0;
 }
+
 header h1 {
-  font-size: 6rem;
-  text-align: center;
-  line-height: 0.9;
+ font-size: 6rem;
+ text-align: center;
+ line-height: 0.9;
 }
+
 header p {
-  text-align: center;
-  font-size: 1.4rem;
-  margin: 1rem 0 0;
+ text-align: center;
+ font-size: 1.4rem;
+ margin: 1rem 0 0;
 }
 
 h1 {
-  text-align: center;
-  font-size: 2rem;
+ text-align: center;
+ font-size: 2rem;
 }
+
 h2 {
-  font-size: 1.3rem;
+ font-size: 1.3rem;
 }
+
 h3 {
-  font-size: 1rem;
+ font-size: 1rem;
 }
 
 p {
-  font-size: 1rem;
-  line-height: 1.4;
-  margin: 0.5rem 0;
+ font-size: 1rem;
+ line-height: 1.4;
+ margin: 0.5rem 0;
 }
 
 @media (min-width: 1024px) {
-  header.container {
+ header.container {
     padding: 6rem 0;
-  }
+ }
 }
 
-header.container,
-div.container {
-  margin: 0 auto;
-  width: 95%;
+header.container, div.container {
+ margin: 0 auto;
+ width: 95%;
 }
+
 @media (min-width: 1200px) {
-  header.container,
-  div.container {
+ header.container, div.container {
     width: 1024px;
-  }
+ }
 }
+
 @media (min-width: 1024px) {
-  header.container,
-  div.container {
+ header.container, div.container {
     width: 960px;
-  }
-  h1 {
+ }
+ h1 {
     font-size: 8rem;
-  }
-  h2 {
+ }
+ h2 {
     font-size: 2rem;
-  }
-  h3 {
+ }
+ h3 {
     font-size: 1.5rem;
-  }
+ }
 }
 
 .flex {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  margin: 2rem -0.5rem;
+ display: flex;
+ flex-wrap: wrap;
+ align-content: center;
+ justify-content: center;
+ margin: 2rem -0.5rem;
 }
+
 .flex .progress {
-  padding: 0.5rem 0;
-  box-sizing: border-box;
-  margin: 0.25rem 0.5rem;
-  width: calc(100% - 1rem);
+ padding: 0.5rem 0;
+ box-sizing: border-box;
+ margin: 0.25rem 0.5rem;
+ width: calc(100% - 1rem);
+ min-width: 0; /* Allows flex items to shrink below their content size */
 }
+
 @media (min-width: 375px) {
-  .flex .progress {
+ .flex .progress {
     width: calc(50% - 1rem);
-  }
+ }
 }
 
 @media (min-width: 780px) {
-  .flex .progress {
+ .flex .progress {
     margin: 0.5rem;
     padding: 1rem 0;
     width: calc(25% - 1rem);
-  }
+ }
 }
 
 svg {
-  transform: rotate(-90deg);
-  display: block;
-  margin: 0;
-  width: 100%;
-  height: auto;
+ transform: rotate(-90deg);
+ display: block;
+ margin: 0;
+ width: 100%;
+ height: auto;
 }
+
 svg circle {
-  fill: none;
-  stroke-width: 50px;
+ fill: none;
+ stroke-width: 50px;
 }
+
 svg circle.prog {
-  will-change: auto;
-  stroke: #3973ff;
+ will-change: auto;
+ stroke: #3973ff;
 }
+
 svg circle.bg {
-  stroke: rgba(0, 0, 0, 0.1);
+ stroke: rgba(0, 0, 0, 0.1);
 }
 
 .progress {
-  display: flex;
-  text-align: left;
+ display: flex;
+ text-align: left;
 }
+
 .progress .left {
-  width: 40px;
+ width: 40px;
 }
-.progress .left,
-.progress .right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
+.progress .left, .progress .right {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
 }
+
 .progress .right {
-  flex: 1;
-  margin-left: 0.5rem;
+ flex: 1;
+ margin-left: 0.5rem;
 }
 
 footer {
-  text-align: center;
-  margin-top: auto;
-  padding: 24px;
-  font-size: smaller;
-  font-family: monospace;
-  line-height: 1.8;
-  opacity: 0.8;
+ text-align: center;
+ margin-top: auto;
+ padding: 24px;
+ font-size: smaller;
+ font-family: monospace;
+ line-height: 1.8;
+ opacity: 0.8;
 }
 
 a {
-  color: #3973ff;
-  text-decoration: none;
+ color: #3973ff;
+ text-decoration: none;
 }
