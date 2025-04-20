@@ -10,11 +10,19 @@ html, body {
  display: flex;
  flex-direction: column;
  overflow-wrap: normal;
+ -webkit-text-size-adjust: 100%;
 }
 
 @media (min-width: 1200px) {
  body {
     overflow-y: hidden;
+ }
+}
+
+/* Small mobile styles */
+@media (max-width: 320px) {
+ body {
+    padding: 2px 8px;
  }
 }
 
@@ -28,15 +36,27 @@ header {
 }
 
 header h1 {
- font-size: 6rem;
+ font-size: 3.5rem; /* Reduced from 6rem for better mobile display */
  text-align: center;
  line-height: 0.9;
 }
 
+@media (min-width: 768px) {
+ header h1 {
+    font-size: 6rem;
+ }
+}
+
 header p {
  text-align: center;
- font-size: 1.4rem;
+ font-size: 1.2rem;
  margin: 1rem 0 0;
+}
+
+@media (min-width: 768px) {
+ header p {
+    font-size: 1.4rem;
+ }
 }
 
 h1 {
@@ -119,6 +139,17 @@ header.container, div.container {
  }
 }
 
+/* Better spacing for very small screens */
+@media (max-width: 320px) {
+ .flex {
+    margin: 1rem -0.25rem;
+ }
+ .flex .progress {
+    margin: 0.15rem 0.25rem;
+    padding: 0.25rem 0;
+ }
+}
+
 svg {
  transform: rotate(-90deg);
  display: block;
@@ -150,6 +181,13 @@ svg circle.bg {
  width: 40px;
 }
 
+/* Adjust SVG size on smaller screens */
+@media (max-width: 374px) {
+ .progress .left {
+    width: 30px;
+ }
+}
+
 .progress .left, .progress .right {
  display: flex;
  flex-direction: column;
@@ -174,4 +212,15 @@ footer {
 a {
  color: #3973ff;
  text-decoration: none;
+}
+
+/* Prevent overflow on small screens */
+@media (max-width: 374px) {
+ .progress .right h2 {
+    font-size: 1rem;
+    word-break: break-all;
+ }
+ .progress .right h3 {
+    font-size: 0.85rem;
+ }
 }
